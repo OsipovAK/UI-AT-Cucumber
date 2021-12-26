@@ -14,7 +14,7 @@ import static ru.pepper.at.template.stepdefs.CommonSteps.props;
 public class Main extends WebPage {
     @Override
     public String getUrl() {
-        return props.pepperUrl();
+        return props.pepperUrl() + "/";
     }
 
 
@@ -56,6 +56,13 @@ public class Main extends WebPage {
 
     @ElementName("сообщение об ошибке авторизации")
     public SelenideElement testLoginError = $x("//p[@class='formList-info formList-info--error']");
+
+    @ElementName("оранжевая кнопка Добавить")
+    public SelenideElement addPosition = $x("//button[@title='Добавить']");
+
+    @ElementName("кнопка добавить Скидку")
+    public SelenideElement addDeals = $x("//a[contains(text(),'Скидку')]");
+    //button[contains(text(),'Скидку')]
 
 
 
